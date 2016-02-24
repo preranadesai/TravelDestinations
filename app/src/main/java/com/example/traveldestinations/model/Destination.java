@@ -3,6 +3,7 @@ package com.example.traveldestinations.model;
 import android.util.Log;
 
 /**
+ * This class contains various attributes for City that is read from CSV file.
  * Created by prerana on 2/23/2016.
  */
 public class Destination {
@@ -22,6 +23,10 @@ public class Destination {
         mDescription = desc;
     }
 
+    /**
+     * Utility method to concatenate the name of city and country
+     * @return String
+     */
     public String getDisplayName() {
         StringBuilder builder = new StringBuilder();
         builder.append(mName);
@@ -31,10 +36,18 @@ public class Destination {
         return builder.toString();
     }
 
+    /**
+     * Returns the description for the city
+     * @return String
+     */
     public String getDescription() {
         return mDescription;
     }
 
+    /**
+     * Returns the image url
+     * @return String
+     */
     public String getUrl() {
         return mUrl;
     }
