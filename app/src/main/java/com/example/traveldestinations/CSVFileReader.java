@@ -27,19 +27,21 @@ public class CSVFileReader {
         populateDestinationsFromFile();
     }
 
+    /**
+     * Return the list of destinations
+     * @return ArrayList
+     */
     public ArrayList<Destination> getDestinations(){
         return mDestinations;
     }
     /**
-	 * Helper method that loads the data from the states.csv and builds
-	 * each csv row into a State object which then gets added to the Adapter.
+	 * Helper method that loads the data from the cities.csv and builds
+	 * each csv row into a Destination object which then gets added to the Adapter.
 	 */
-
     private void populateDestinationsFromFile(){
 
         // Get input stream and Buffered Reader for our data file.
         InputStream is = mContext.getResources().openRawResource(R.raw.cities);
-        //InputStream is = mContext.getAssets().open("states.csv");
         BufferedReader reader = new BufferedReader(new InputStreamReader(is));
         String line;
 

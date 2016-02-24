@@ -14,6 +14,7 @@ import com.example.traveldestinations.model.Destination;
 import java.util.ArrayList;
 
 /**
+ * This is adaptor class that add the data from Destination object into the listView
  * Created by prerana on 2/23/2016.
  */
 public class CustomListAdaptor extends BaseAdapter {
@@ -41,6 +42,13 @@ public class CustomListAdaptor extends BaseAdapter {
         return position;
     }
 
+    /**
+     * Sets the data for a destination into the view
+     * @param position
+     * @param convertView
+     * @param parent
+     * @return View
+     */
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         View rowView = convertView;
@@ -63,6 +71,9 @@ public class CustomListAdaptor extends BaseAdapter {
         return rowView;
     }
 
+    /**
+     * ViewHolder class to improve the lookup time of view elements
+     */
     static class ViewHolder {
         public TextView textDescription;
         public TextView textName;
